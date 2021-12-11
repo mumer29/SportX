@@ -53,7 +53,7 @@ function sportXRegisterStyles()
         'sportXMainStylesheet',
         get_template_directory_uri() . '/assets/css/main.css',
         array('sportXBootstrap', 'sportXFontAwesome'),
-        '1.4',
+        '2.1',
         'all'
     );
 }

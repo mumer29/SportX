@@ -11,25 +11,30 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-md pb-2">
         <div class="container-fluid">
-            <button id="btnMobileMenu" class="d-lg-none d-sm-block btn btn-outline-dark ms-auto align-items-center"
+            <div class="d-md-none pb-1 mobileLogo d-flex align-items-center">
+                <h1 class="navLogo">SportX</h1>
+                <small><i>Live football scores at your fingertips</i></small>
+            </div>
+            <button id="btnMobileMenu" class="d-md-none d-sm-block btn btn-outline-dark ms-auto align-items-center"
                 type="button">
                 <span class="d-flex align-items-center"><i id="mobileMenuIcon" class="fas fa-bars"></i></span>
             </button>
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse align-items-center">
                 <div class="col">
                     <?php
                     wp_nav_menu(array(
                         'menu' => 'left',
                         'theme_location' => 'left',
                         'container' => '',
-                        'items_wrap' => '<ul class="navbar-nav justify-content-end mb-2 mb-lg-0">%3$s</ul>'
+                        'items_wrap' => '<ul class="navbar-nav justify-content-end">%3$s</ul>'
                     ));
                     ?>
                 </div>
-                <div class="col-3 text-center navLogo">
-                    SportX
+                <div class="col-3 text-center d-flex flex-column">
+                    <h1 class="navLogo">SportX</h1>
+                    <small><i>Live football scores at your fingertips</i></small>
                 </div>
                 <div class="col">
                     <?php
@@ -37,7 +42,7 @@
                         'menu' => 'right',
                         'container' => '',
                         'theme_location' => 'right',
-                        'items_wrap' => '<ul class="navbar-nav justify-content-start mb-2 mb-lg-0">%3$s</ul>'
+                        'items_wrap' => '<ul class="navbar-nav justify-content-start">%3$s</ul>'
                     ));
                     ?>
                 </div>
@@ -48,9 +53,6 @@
                     <span class="d-flex align-items-center"><i id="mobileMenuIcon" class="fas fa-times"></i></span>
                 </button>
                 <div class="d-flex align-items-center justify-content-center flex-column h-100">
-                    <div class="text-center mobileLogo">
-                        SportX
-                    </div>
 
                     <?php
                     wp_nav_menu(array(
