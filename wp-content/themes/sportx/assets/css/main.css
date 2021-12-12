@@ -7,6 +7,12 @@
 /* Some global rules */
 html {
   font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 button:focus {
@@ -20,6 +26,7 @@ body {
 }
 
 .navbar {
+  height: 100px;
   padding: 0;
 }
 
@@ -123,10 +130,20 @@ small {
 
 /* Animated border under navigation items and a static one under navigation menu */
 .mobileNavItems .nav-item a,
-.navbar {
+.navbar,
+.tagline {
   background: linear-gradient(0deg, var(--primary-color), var(--primary-color))
     bottom center no-repeat;
   background-size: 0px 5px;
+  transition: 0.3s;
+}
+
+.tagline {
+  background-size: 100% 5px;
+}
+
+.tagline:hover {
+  background-size: 80% 5px;
   transition: 0.3s;
 }
 
@@ -136,11 +153,45 @@ small {
   transition: 0.3s;
 }
 
+/* Front page container */
+.frontPageContainer {
+  height: calc(100vh - 150px);
+  display: flex;
+}
+
+/* Image style and shadow */
+#image {
+  height: 600px;
+  filter: drop-shadow(-140px -140px 5px rgba(0, 0, 0, 0.5));
+  margin-top: 2rem;
+  transition: 0.5s;
+}
+
+#image:hover {
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+/* Footer style */
+footer {
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
 /* Media query for font size */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   html {
     font-size: 0.7rem;
+  }
+  #image {
+    filter: drop-shadow(-60px -60px 5px rgba(0, 0, 0, 0.5));
+    height: 240px;
   }
 }
 
@@ -149,12 +200,19 @@ small {
   html {
     font-size: 0.9rem;
   }
+  #image {
+    filter: drop-shadow(-60px -60px 5px rgba(0, 0, 0, 0.5));
+    height: 350px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   html {
     font-size: 1rem;
+  }
+  #image {
+    height: 400px;
   }
 }
 
@@ -163,11 +221,17 @@ small {
   html {
     font-size: 1.2rem;
   }
+  #image {
+    height: 500px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 1.4rem;
+  }
+  #image {
+    height: 600px;
   }
 }
