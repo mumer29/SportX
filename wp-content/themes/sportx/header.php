@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-md pb-2">
         <div class="container-fluid">
             <div class="d-md-none pb-1 mobileLogo d-flex align-items-center">
-                <h1 class="navLogo">SportX</h1>
+                <h1 class="navLogo"><a href="<?php get_site_url() ?>">SportX</a></h1>
                 <small><i>Live football scores at your fingertips</i></small>
             </div>
             <button id="btnMobileMenu" class="d-md-none d-sm-block btn btn-outline-dark ms-auto align-items-center"
@@ -33,7 +33,7 @@
                     ?>
                 </div>
                 <div class="col-3 text-center d-flex flex-column">
-                    <h1 class="navLogo">SportX</h1>
+                    <h1 class="navLogo"><a href="<?php echo get_site_url() ?>">SportX</a></h1>
                     <small><i>Live football scores at your fingertips</i></small>
                 </div>
                 <div class="col">

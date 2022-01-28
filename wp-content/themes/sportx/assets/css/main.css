@@ -32,10 +32,14 @@ body {
 
 /* Nav logo style */
 .navLogo {
+  margin: 0;
+}
+
+.navLogo a {
   font-weight: bold;
   color: var(--primary-color);
   font-size: 2.5rem;
-  margin: 0;
+  text-decoration: none;
 }
 
 small {
@@ -153,9 +157,10 @@ small {
   transition: 0.3s;
 }
 
-/* Front page container */
-.frontPageContainer {
-  height: calc(100vh - 150px);
+/* Container class */
+.wrapper {
+  margin: 1rem;
+  min-height: calc(100vh - 200px);
   display: flex;
 }
 
@@ -181,6 +186,135 @@ footer {
   padding-bottom: 10px;
   justify-content: center;
   font-size: 0.7rem;
+}
+
+/* Testing */
+.flex-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+.flex-container .flex-item {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 15px;
+  background: var(--primary-color);
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+
+.flex-container .flex-item::before {
+  content: 'SPORTX';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 5me;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.flex-container .flex-item::after {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 5me;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.flex-container .team.flex-item::after {
+  content: 'TEAM';
+}
+.flex-container .venue.flex-item::after {
+  content: 'VENUE';
+}
+.flex-container .league.flex-item::after {
+  content: 'LEAGUE';
+}
+
+.flex-container .flex-item:hover:before,
+.flex-container .flex-item:hover:after {
+  opacity: 0.2;
+}
+
+.flex-container .flex-item .name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.flex-container .flex-item:hover .name {
+  top: 40px;
+  opacity: 1;
+}
+
+.flex-container .flex-item .country-logo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 15%;
+  height: 15%;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, 0, 75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.flex-container .flex-item:hover .country-logo {
+  bottom: 30px;
+  opacity: 1;
+}
+
+.flex-container .flex-item .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #fff;
+  transform-style: preserve-3d;
+  z-index: 10;
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0px);
+}
+
+.flex-container .flex-item .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 140px;
+  border-radius: 10px;
+  max-height: 140px;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  z-index: 11;
+  transform: translate3d(-50%, -50%, 0px);
+}
+
+.flex-container .flex-item:hover .logo {
+  transform: translate3d(-50%, -50%, 100px);
 }
 
 /* Media query for font size */

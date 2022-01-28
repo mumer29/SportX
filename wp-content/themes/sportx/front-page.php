@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class="frontPageContainer">
+<div class="wrapper">
     <div class="row g-0">
         <div class="col-sm d-flex align-items-center justify-content-center">
             <h1 class="tagline pb-3 m-5">Enjoy our rich coverage of football matches, a big codex of leauges, teams,

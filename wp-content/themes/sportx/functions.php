@@ -78,6 +78,13 @@ function sportXRegisterScripts()
         true
     );
     wp_enqueue_script(
+        'sportXVanillaTilt',
+        get_template_directory_uri() . '/node_modules/vanilla-tilt/dist/vanilla-tilt.min.js',
+        array(),
+        '1.7.2',
+        true
+    );
+    wp_enqueue_script(
         'sportXPopperJS',
         get_template_directory_uri() . '/node_modules/@popperjs/core/dist/umd/popper.min.js',
         array(),
@@ -907,17 +914,9 @@ function insert_fixtures_in_wp()
     foreach ($leagues as $league) {
         $post_meta = get_post_meta($league->ID);
         $seasons = wp_get_object_terms($league->ID, 't_season', array('fields' => 'names'));
-        $count = "0";
         foreach ($seasons as $season) {
-            $count = $count + 1;
-            if ($count == 5) {
-                echo "sleep";
-                sleep(60);
-                echo "sleep done";
-                $count = 1;
-            }
+            sleep(15);
             $fixtures = json_decode(call_api('fixtures', '?league=' . $post_meta['id'][0] . '&season=' . $season));
-            var_dump($fixtures);
             foreach ($fixtures->response as $index => $fixture) {
                 $venue = $fixture->fixture->venue;
                 $status = $fixture->fixture->status;
@@ -1036,4 +1035,4 @@ function insert_fixtures_in_wp()
     }
 }
 
-add_action('init', 'insert_fixtures_in_wp', 0);
+// add_action('init', 'insert_fixtures_in_wp', 0);
