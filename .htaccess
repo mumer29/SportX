@@ -13,6 +13,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /SportX/index.php [L]
 </IfModule>
 
-php_value max_execution_time 9240
-
 # END WordPress

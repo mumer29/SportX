@@ -15,6 +15,10 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 button:focus {
   outline: none !important;
   box-shadow: none !important;
@@ -188,7 +192,7 @@ footer {
   font-size: 0.7rem;
 }
 
-/* Testing */
+/* Style for cards */
 .flex-container {
   position: relative;
   display: flex;
@@ -315,6 +319,114 @@ footer {
 
 .flex-container .flex-item:hover .logo {
   transform: translate3d(-50%, -50%, 100px);
+}
+
+/* Fixture container style */
+.fixtureContainer {
+  position: relative;
+  transform-style: preserve-3d;
+  display: flex;
+  border-radius: 10px;
+  background: var(--primary-color);
+  margin: 15px;
+  z-index: 10;
+}
+
+.fixtureContainer .flex-item::before {
+  transform: translate3d(0, 0, 120px);
+}
+
+.fixtureContainer .flex-item::after {
+  transform: translate3d(0, 0, 120px);
+}
+
+.fixtureContainer .circle {
+  transform: translate3d(-50%, -50%, 120px) !important;
+}
+
+.fixtureContainer .logo.logoFixture {
+  transform: translate3d(-50%, -50%, 125px);
+}
+
+.fixtureContainer .flex-item:hover .logo {
+  transform: translate3d(-50%, -50%, 200px);
+}
+
+/* Pagination style */
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  max-width: 800px;
+  align-items: center;
+  background: var(--primary-color);
+  padding: 5px 5px;
+  border-radius: 25px;
+  justify-content: center;
+}
+
+.pagination a,
+.pagination span {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 35px;
+  font-size: 0.7em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.pagination a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pagination span.dots {
+  font-size: 0.7em;
+  padding: 0 12px !important;
+}
+
+.pagination a.page-numbers,
+.pagination span.page-numbers {
+  margin-left: 7px;
+  margin-right: 7px;
+  padding: 0 15px;
+}
+
+.pagination a.prev {
+  margin-right: 5px;
+  margin-left: 0 !important;
+  background: white;
+  color: black;
+  padding: 0 20px !important;
+  border-radius: 25px 5px 5px 25px !important;
+}
+
+.pagination a.next {
+  margin-left: 5px;
+  margin-right: 0 !important;
+  background: white;
+  color: black;
+  padding: 0 20px !important;
+  border-radius: 5px 25px 25px 5px !important;
+}
+
+.pagination span.dots:hover,
+.pagination a.page-numbers:hover,
+.pagination span.current {
+  background: white;
+  color: black;
+  padding: 0 15px;
+  border-radius: 50%;
+}
+
+.pagination span.dots:hover {
+  padding: 0 12px !important;
 }
 
 /* Media query for font size */
