@@ -122,8 +122,8 @@ $league_slugs = [];
                 $team_away_meta = get_post_meta($team_away->ID);
         ?>
         <a href="<?php echo $post->guid ?>">
-            <div class="fixtureContainer flex-row">
-                <div class="flex-item team">
+            <div class="fixtureContainer ">
+                <div class="flex-item team tilt">
                     <div class="name"> <?php echo $team_home->post_title ?> </div>
                     <img class="country-logo" src="<?php if (!empty($country_meta)) echo $country_meta['flag'][0] ?>">
                     <div class="circle"></div>
@@ -141,7 +141,7 @@ $league_slugs = [];
                         </b>
                     </h1>
                 </div>
-                <div class="flex-item team">
+                <div class="flex-item team tilt">
                     <div class="name"> <?php echo $team_away->post_title ?> </div>
                     <img class="country-logo" src="<?php if (!empty($country_meta)) echo $country_meta['flag'][0] ?>">
                     <div class="circle"></div>

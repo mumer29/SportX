@@ -19,7 +19,7 @@ get_header();
                 $country_meta = get_term_meta(get_term_by('name', 'Croatia', 't_country')->term_id);
         ?>
         <a href="<?php echo $post->guid ?>">
-            <div class="flex-item team">
+            <div class="flex-item team tilt">
                 <div class="name"> <?php echo $post->post_title ?> </div>
                 <img class="country-logo" src="<?php if (!empty($country_meta)) echo $country_meta['flag'][0] ?>">
                 <div class="circle"></div>

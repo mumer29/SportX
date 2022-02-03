@@ -8,8 +8,8 @@ $(document).ready(function () {
       $('.mobileMenu').addClass('hidden');
     }
   });
-  VanillaTilt.init(document.querySelectorAll('.flex-item'), {
-    max: 25,
-    speed: 400,
+  VanillaTilt.init(document.querySelectorAll('.tilt'), {
+    max: 10,
+    speed: 1000,
   });
 });

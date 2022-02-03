@@ -11,6 +11,26 @@ html {
   margin: 0;
 }
 
+div .vr {
+  background-color: var(--primary-color) !important;
+  opacity: 0.92;
+  width: 10px !important;
+  border-radius: 30px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+hr {
+  height: 5px !important;
+  background-color: var(--primary-color) !important;
+  opacity: 0.92;
+  border-radius: 60px;
+}
+
+.fixtureHr {
+  height: 10px !important;
+}
+
 p {
   margin: 0;
 }
@@ -325,6 +345,7 @@ footer {
 .fixtureContainer {
   position: relative;
   transform-style: preserve-3d;
+  flex-direction: row;
   display: flex;
   border-radius: 10px;
   background: var(--primary-color);
@@ -429,7 +450,21 @@ footer {
   padding: 0 12px !important;
 }
 
-/* Media query for font size */
+/* Single post details  */
+.detailsContainer {
+  margin: 15px;
+}
+
+.detailsWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.fixtureDetailsContainer {
+  display: flex;
+  flex-direction: row;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   html {
@@ -439,12 +474,21 @@ footer {
     filter: drop-shadow(-60px -60px 5px rgba(0, 0, 0, 0.5));
     height: 240px;
   }
+  .vr.hideOnMobile {
+    display: none;
+  }
+  .detailsWrapper {
+    flex-direction: column;
+  }
+  .fixtureDetailsContainer {
+    flex-direction: column;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   html {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   #image {
     filter: drop-shadow(-60px -60px 5px rgba(0, 0, 0, 0.5));
@@ -455,17 +499,24 @@ footer {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   html {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   #image {
     height: 400px;
   }
 }
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .fixtureContainer {
+    flex-direction: column;
+  }
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   html {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   #image {
     height: 500px;
@@ -475,7 +526,7 @@ footer {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   html {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   #image {
     height: 600px;
