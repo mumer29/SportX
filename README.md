@@ -1,2 +1,2 @@
 # SportX
-Wordpress site with a custom theme created in the React framework Frontity
+Wordpress site with a custom theme created with bootstrap.
